@@ -1,16 +1,16 @@
 # Its still in alpha may exprienece issues!!!!!!!
 #
-#           BFFRT (Basic File Finding and Running Tool) vAlpha1
+#           BFFRT (Basic File Finding and Running Tool) vAlpha1_fix
 #
 
 import os
 import subprocess # WHAT THE FUCK IS THIS
 import platform # WHAT THE FUCK IS THIS
 
-def this_is_a_bucket(path): # dear god ....no
+def this_is_a_bucket(path): # dear god 
     print(f"\nContents of {path}:\n")
     for i in os.listdir(path):
-        full_path = os.path.join(path, i) # LOOK AT THIS SHIT WHAT THE FUCK IS THIS
+        full_path = os.path.join(path, i) # LOOK AT THIS SHIT WHAT THE FUCK IS THIS ITS LIKE PATH OF THE PATH
         if os.path.isdir(full_path):
             print("[DIR] ", i)
         else:
@@ -37,7 +37,7 @@ def main():
     cwd = os.getcwd()
     print(r"""
 ===========================================
-   BFFRT (Basic File Finding and Running Tool) vAlpha1
+   BFFRT (Basic File Finding and Running Tool) vAlpha1_fix
    Commands: ls | cd <folder> | open <file> | quit
 ===========================================
 """)
@@ -59,19 +59,19 @@ def main():
             print("Exiting... Bye ")
             break
         elif action == "ls":
-            this_is_a_bucket(cwd) # dear god ....no
+            this_is_a_bucket(cwd) # dear god 
         elif action == "cd":
             if len(parts) == 2:
                 new_path = os.path.join(cwd, parts[1]) # Words cant describe my fucking confusion.I hate this!
                 if os.path.isdir(new_path):
                     cwd = new_path
                 else:
-                    print(f"[!] '{parts[1]}' is not a directory.")
+                    print(f"[!] '{parts[1]}' is not a directory.") # stupid dumb dumb stupid
             else:
                 print("Usage: cd <folder>")
         elif action == "open":
             if len(parts) == 2:
-                open_file(cwd, parts[1])
+                open_file(cwd, parts[1]) # pain
             else:
                 print("Usage: open <file>")
         else:
