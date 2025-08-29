@@ -37,7 +37,7 @@ def main():
     cwd = os.getcwd()
     print(r"""
 ===========================================
-   BFFRT (Basic File Finding and Running Tool) vAlpha2
+   BFFRT (Basic File Finding and Running Tool) vAlpha1
    Commands: ls | cd <folder> | open <file> | quit
 ===========================================
 """)
